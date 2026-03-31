@@ -9,7 +9,7 @@ public class EmpleadoContratado extends Empleado {
     }
 
     @Override
-    public float calcularSueldo() {
+    public double calcularSueldo() {
         return this.horasTrabajadas * this.valorHora;
     }
 }

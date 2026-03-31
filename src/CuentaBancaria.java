@@ -4,7 +4,7 @@ public class CuentaBancaria {
 
     public CuentaBancaria(float saldo, String titular) {
         this.saldo = saldo;
-        this.titular = titular;         //referencia a los objetos de la clase
+        this.titular = titular;         //this referencia a los objetos de la clase
     }
 
     public float depositar(float deposito) {

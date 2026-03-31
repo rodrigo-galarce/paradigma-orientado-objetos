@@ -1,13 +1,17 @@
 public class Empleado {
     protected String nombre;
-    protected float sueldo;
+    protected double sueldo;
 
-    public Empleado(String nombre, float sueldo) {
+    public Empleado(String nombre, double sueldo) {
         this.nombre = nombre;
         this.sueldo = sueldo;
     }
 
-    public float calcularSueldo() {
+    public double calcularSueldo() {
         return sueldo;
+    }
+
+    interface Pagable {
+        double calcularPago();
     }
 }
