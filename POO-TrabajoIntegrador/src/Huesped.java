@@ -4,7 +4,11 @@ public class Huesped extends Usuario {
         super(nombre, correoElectronico, dni);
     }
 
-    public void buscarReserva() {
-
+    public void buscarReserva(conjuntoReservas conjunto) {
+        for (Reserva reserva : conjunto.getReservas()) {
+            if (reserva.getHuesped().equals(this)) {
+                System.out.println(reserva);
+            }
+        }
     }
 }

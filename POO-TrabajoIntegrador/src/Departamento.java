@@ -1,4 +1,4 @@
-public class Departamento extends Alojamiento {
+public abstract class Departamento extends Alojamiento {
     private boolean tieneAscensor;
     private int piso;
 
@@ -8,10 +8,12 @@ public class Departamento extends Alojamiento {
         this.piso = piso;
     }
 
-
     @Override
     public double calcularPrecio(int dias) {
         double precio = precioPorNoche;
-        if (this.tieneAscensor)
+        if (this.tieneAscensor){
+            precio += precio * 0.20;
+        }
+        return precio;
     }
 }

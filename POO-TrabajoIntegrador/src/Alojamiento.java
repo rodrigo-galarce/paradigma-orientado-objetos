@@ -1,4 +1,4 @@
-public class Alojamiento implements Reservable {
+public abstract class Alojamiento implements Reservable {
     protected String titulo;
     protected String ubicacion;
     protected double precioPorNoche;

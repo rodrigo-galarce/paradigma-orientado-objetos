@@ -24,7 +24,7 @@ public class Plataforma {
     public void crearReserva(Huesped huesped, Alojamiento alojamiento) {
         Reserva nuevaReserva = new Reserva(LocalDate.of(2026,4,5),
                                 LocalDate.of(2026,5,1),
-                                huesped, alojamiento, estado);
+                                huesped, alojamiento);
         reservas.add(nuevaReserva);
     }
 

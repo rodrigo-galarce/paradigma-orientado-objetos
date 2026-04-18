@@ -1,4 +1,4 @@
-public class Casa extends Alojamiento {
+public abstract class Casa extends Alojamiento {
     private boolean tieneJardin;
     private boolean tienePileta;
 
@@ -9,5 +9,17 @@ public class Casa extends Alojamiento {
     }
 
     @Override
-    public double calcularPrecio()
+    public double calcularPrecio(int dias) {
+        double precio = getPrecioPorNoche() * dias;
+
+        if (tieneJardin) {
+            precio *= 1.25;
+        }
+
+        if (tienePileta) {
+            precio *= 1.30;
+        }
+
+        return precio;
+    }
 }

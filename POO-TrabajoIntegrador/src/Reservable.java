@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public interface Reservable {
-    public
+    public boolean estaDisponible(LocalDate inicio, LocalDate fin);
 }
