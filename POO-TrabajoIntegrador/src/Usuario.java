@@ -1,9 +1,9 @@
-public class Usuario {
+public class Usuario implements Comparable<Usuario>{
     protected String nombre;
     protected String correoElectronico;
-    protected double dni;
+    protected int dni;
 
-    public Usuario(String nombre, String correoElectronico, double dni) {
+    public Usuario(String nombre, String correoElectronico, int dni) {
         this.nombre = nombre;
         this.correoElectronico = correoElectronico;
         this.dni = dni;
@@ -13,7 +13,12 @@ public class Usuario {
         return nombre;
     }
 
-    public double getDni() {
+    public int getDni() {
         return dni;
+    }
+
+    @Override
+    public int compareTo(Usuario otro) {
+        return Integer.compare(this.dni, otro.getDni());
     }
 }
