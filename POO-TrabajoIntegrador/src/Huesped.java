@@ -1,6 +1,6 @@
 public class Huesped extends Usuario {
 
-    public Huesped(String nombre, String correoElectronico, double dni) {
+    public Huesped(String nombre, String correoElectronico, int dni) {
         super(nombre, correoElectronico, dni);
     }
 
